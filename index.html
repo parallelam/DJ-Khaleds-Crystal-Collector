@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>DJ Khaled's Cry$tal Collector</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!--Input reset CSS link below to clear any pre-existing player formatting.-->
+    <link href="assets/css/reset.css" media="screen" rel="stylesheet" type="text/css">
+    <!--Input Bootstrap CSS link below for formatting.-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--Input custom CSS link below to override Bootstrap formatting.-->
+	<link href="assets/css/style.css" media="screen" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>DJ Khaled's Cry$tal Collector</h1>
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-md-12 instructions box">
+				<h3>Instructions</h3>
+				<p>Listen up closely sucka. DJ Khaled will assign you a random Bling-Bling Goal at the start of the hustle.</p>
+				<p>By clicking on any of the four cash-money crystals below, you will add cash-money points to your score. You <strong>win</strong> the round by achieving precisely the target amount of cash-money needed for a trip to Gangsta's Paradise to buy a Thug Mansion. You <strong>lose</strong> if you exceed the target cash-money.</p>
+				<p>The bling-bling of each cash-money crystal remains a mystery until selected, at which point you can determine the cash-money by tracking your score changes.</p>
+				<p>With each trip to Gangsta's Paradise, your Bling-Bling Goal and the values of the cash-money crystals will change randomly. <span>Click any crystal to begin playing.</span></p>
+			</div>
+		</div><br>
+		<div class="modal alert row text-center">
+			<h3 id="winloss"></h3><a class="btn btn-lg btn-success" data-target="#basicModal" data-toggle="modal" href="#">Anutha One</a>
+		</div><br>
+		<div class="row box">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<h4>Bling-Bling Goal:</h4>
+						<div id="scoreTarget"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<h4>Your Cash-Money:</h4>
+						<div id="scoreBox">
+							0
+						</div>
+					</div>
+				</div>
+		    </div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<h4>Thug Mansions Bought:</h4>
+						<div id="wins"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<h4>Homies Lost:</h4>
+						<div id="losses">
+							0
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-md-3 crystal">
+				<button class='crystalButton' id='button1'><img alt="Ruby Gem" src="assets/images/ruby.png"></button>
+			</div>
+			<div class="col-md-3 crystal">
+				<button class='crystalButton' id='button2'><img alt="Emerald Gem" src="assets/images/emerald.png"></button>
+			</div>
+			<div class="col-md-3 crystal">
+				<button class='crystalButton' id='button3'><img alt="Sapphire Gem" src="assets/images/sapphire.png"></button>
+			</div>
+			<div class="col-md-3 crystal">
+				<button class='crystalButton' id='button4'><img alt="Citrine Gem" src="assets/images/citrine.png"></button>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript">
+	</script> 
+	<script src="assets/javascript/game.js">
+    </script>
+    <audio id="audio" src="assets/sounds/anuthaone.mp3" preload="auto" type="audio/mp3"></audio>
+</body>
+</html>
