@@ -4,7 +4,6 @@ var lossCounter = 0;
 var targetScore = 0;
 var crystalBtn = $('.crystalButton');
 
-
 function startGame() {
 	currentScore = 0;
 	$('#scoreBox').text(currentScore);
@@ -16,7 +15,7 @@ function startGame() {
 	$('#scoreTarget').text(targetScore);
 	var buttonValues = [];
 	for (var i = 0; i < 4; i++) {
-		buttonValues.push(Math.round(Math.random() * 12))
+		buttonValues.push(Math.floor(Math.random() * 12) + 1);
 		console.log(buttonValues);
 	}
 	$('#button1').attr('value', buttonValues[0]);
@@ -45,11 +44,19 @@ var playGame = function() {
 	}
 }
 
-var playSound = function() {
-    audio.play();
-};
-
 $('.crystalButton').on('click', playGame);
 $('.btn-success').on('click', startGame);
 
-// .addEventListener('click', playSound, false);
+$(document).ready(function() {
+	var obj = document.createElement("audio");
+	obj.src = "assets/sounds/anuthaone.mp3";
+	obj.volume = 0.75;
+	obj.autoPlay = false;
+	obj.preLoad = true;
+	obj.controls = true;
+  
+	$(".btn-success").click(function() {
+	  obj.play();
+	  console.log('Playing...')
+	});
+  });
